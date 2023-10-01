@@ -1,16 +1,13 @@
 import math
 import time
-import os
+
+ANGLE1_SPEED = 0.04
+ANGLE2_SPEED = 0.02
 
 def run():
     angle1 = 0
     angle2 = 0
     while True:
-        if os.name == 'nt':
-            width, height = os.get_terminal_size()
-        else:
-            height, width = map(int, os.popen('stty size', 'r').read().split())
-            
         z_buffer = [0]*1760
         output = [' ']*1760
         for theta in range(0,628,int(0.07*100)):
@@ -36,8 +33,8 @@ def run():
 
         print('\033[0;0H' + ''.join(output))
         time.sleep(0.01)
-        angle1 += 0.04
-        angle2 += 0.02
+        angle1 += ANGLE1_SPEED
+        angle2 += ANGLE2_SPEED
 
 if __name__ == "__main__":
     run()
