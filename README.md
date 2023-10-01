@@ -23,3 +23,6 @@ This project animates a 3D donut shape in the terminal using Python. It also inc
 - The `resize.py` script is designed to work with Windows PowerShell or cmd windows. If you're using a different terminal, you may need to modify this script for it to work correctly.
 
 - The `donut.py` script uses the terminal size to calculate the donut's position and size. If your terminal window is too small or big, you may not see the full animation.
+
+##Credit
+This code is inspired by Andy Sloane blog post where he explained how he wrote C code for rotating ASCII donut. https://www.a1k0n.net/2011/07/20/donut-math.html
